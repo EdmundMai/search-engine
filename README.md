@@ -1,3 +1,26 @@
+## Tradeoffs
+
+- Because the app is so small, I decided not to incude any application state
+  management libraries like Redux. Therefore, if the application were to grow,
+  some time would need to be invested into extracting the logic from the
+  components into actions / reducers.
+
+- Because the app is still so small, I decided not to extract most of the
+  components (TextInput, SearchButton, etc.) into separate files even though
+  they would in theory be reusable because they are currently only being used in one place.
+  It was a conscious decision to keep them private in one because I did not want to overengineer it.
+
+## Cases I have considered
+
+- I noticed some of the results don't have images, so I have a conditional that
+  prevents a broken image from being displayed if the URL does not exist.
+
+- In case the API returns a bad response, I display an error.
+
+- I URI encode the search term.
+
+================================
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
