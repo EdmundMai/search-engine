@@ -15,7 +15,9 @@
 - I noticed some of the results don't have images, so I have a conditional that
   prevents a broken image from being displayed if the URL does not exist.
 
-- In case the API returns a bad response, I display an error.
+- In case the API returns a bad response, I display an error and clear out the
+  previous results. If the request is successful, I clear out the error and
+  replace the results.
 
 - I URI encode the search term.
 
