@@ -7,7 +7,7 @@ const query = searchTerm => {
         encodeURIComponent(searchTerm)
     )
     .then(({ data: { itemListElement } }) => {
-      const results = itemListElement.map(e => {
+      return itemListElement.map(e => {
         const { result } = e;
         const { name, description, image } = result;
 
